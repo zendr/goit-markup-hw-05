@@ -20,7 +20,7 @@
                 <a class="logo" href="./index.html">Web<span class="logo-black">Studio</span></a>
                 <ul class="nav">
                     <li class="nav-list">
-                        <a class="item" href="./index.html">Студія</a>
+                        <a class="item current" href="./index.html">Студія</a>
                     </li>
                     <li class="nav-list">
                         <a class="item" href="./portfolio.html">Портфоліо</a>
@@ -53,11 +53,21 @@
         </div>
     </header>
     <main>
-    <!--Шапка-->
+    <!--Герой-->
     <section class="solution section">
         <div class="container">
             <h1 class="solution-text">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br> ВАШОГО БІЗНЕСУ</h1>
-        <button type="button" class="solution-button">Замовити послугу</button>
+        <button type="button" class="solution-button" data-modal-open>Замовити послугу</button>
+        </div>
+        <!--Модальне вікно-->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="close" data-modal-close>
+                    <svg class="close-svg" width="18" height="18">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
     <!--Особливості-->
@@ -110,13 +120,29 @@
             <h2 class="what-we-do-text">Чим ми займаємось</h2>
             <ul class="what-we-do">
                 <li class="item">
-                    <img src="images/img1.jpg" alt="Програміст пише код" width="370">
+                    <div class="work-item">
+                        <img src="images/img1.jpg" alt="Програміст пише код" width="370">
+                        <div class="thumb-work">
+                            <p class="work-title">Десктопні додатки</p>
+                        </div>
+                    </div>
+                    
                 </li>
                 <li class="item">
-                    <img src="images/img2.jpg" alt="Розробник працює над інтерфейсом мобільного телефону" width="370">
+                    <div class="work-item">
+                        <img src="images/img2.jpg" alt="Розробник працює над інтерфейсом мобільного телефону" width="370">
+                        <div class="thumb-work">
+                            <p class="work-title">Мобільні додатки</p>
+                        </div>
+                    </div>
                 </li>
                 <li class="item">
-                    <img src="images/img3.jpg" alt="Дизайнер тримає в руках планшет та вибирає колір макету" width="370">
+                    <div class="work-item">
+                        <img src="images/img3.jpg" alt="Дизайнер тримає в руках планшет та вибирає колір макету" width="370">
+                        <div class="thumb-work">
+                            <p class="work-title">Дизайнерські рішення</p>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -381,5 +407,7 @@
             </div>
         </div>
     </footer>
+    <!--Підключення скрипта-->
+    <script src="./js/modal.js"></script>
 </body>
 </html>
